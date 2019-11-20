@@ -70,7 +70,7 @@ increment by 1
 no cycle;
 
 /* Sequence for Package */
-Create sequence stbinventory_seq
+Create sequence package_seq
 start with 1
 increment by 1
 no cycle;
