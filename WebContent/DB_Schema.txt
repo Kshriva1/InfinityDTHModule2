@@ -1,0 +1,69 @@
+create table SetTopBox (
+	setTopBoxId number primary key,
+	STBType varchar(20) not null,
+	STBlength number not null,
+	STBbreadth number not null,
+	STBwidth number not null,
+	price number not null,
+	installationCharges number not null,
+	updationCharges number not null,
+	percentageDiscount number not null,
+	billingType varchar(30) not null,
+	refundAmount number not null
+);
+
+create table SetTopBoxInventory(
+	setTopBoxId number primary key references SetTopBox(setTopBoxId),
+	STBtype varchar(20) not null,
+	serialNumber number unique not null,
+	macId varchar(20) unique not null,
+	remoteAssetId number unique not null,
+	dishAssetId number unique not null,
+	setTopBoxStatus varchar(20) default 'Unassigned'
+);
+
+CREATE TABLE Package (
+	pkgId number unique,
+	pkgName varchar(30) not null,
+	pkgCategory varchar (30) not null,
+	pkgChargeType varchar(20) not null,
+	pkgTransmissionType varchar(20) not null,
+	pkgCost number not null,
+	pkgFromDate date not null,
+	pkgToDate date not null,
+	pkgByDefault varchar(10) not null
+);
+
+CREATE TABLE Channel (
+	channelId number unique,
+	channelName varchar(30) not null,
+	channelBand varchar(20) not null,
+	videoFrequency number not null,
+	audioFrequency number not  null,
+	channelChargeType varchar(20) not null,
+	channelTransmissionType varchar (20) not null,
+	channelCharge varchar (10)not null,
+	packageId references Package(pkgId)
+);
+
+CREATE TABLE FEATURE (
+	featureId NUMBER PRIMARY KEY,
+	featureName VARCHAR(50)
+);
+
+CREATE TABLE SETTOPBOX_FEATURE (
+	setTopBoxId NUMBER REFERENCES SetTopBox (setTopBoxId),
+	featureId NUMBER REFERENCES FEATURE (featureId)
+);
+
+
+insert into FEATURE values (001, 'Multi Lingual');
+insert into FEATURE values (002, 'Genre Wise Channel Guide');
+insert into FEATURE values (003, 'Live Recording');
+insert into FEATURE values (004, 'Scheduled Recording');
+insert into FEATURE values (005, 'Pause/Play');
+insert into FEATURE values (006, 'Rewind/Forward');
+insert into FEATURE values (007, 'Slow Motion');
+insert into FEATURE values (008, 'Child Lock');
+insert into FEATURE values (009, 'Preview Screen');
+insert into FEATURE values (010, 'Program Reminder');
