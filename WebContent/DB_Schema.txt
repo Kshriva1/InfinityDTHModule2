@@ -42,7 +42,7 @@ CREATE TABLE Channel (
 	audioFrequency number not  null,
 	channelChargeType varchar(20) not null,
 	channelTransmissionType varchar (20) not null,
-	channelCharge varchar (10)not null,
+	channelCharge number not null,
 	packageId references Package(pkgId)
 );
 
