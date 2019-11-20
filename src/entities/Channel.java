@@ -9,6 +9,7 @@ public class Channel {
 	private String channelChargeType;
 	private String channelTransmissionType;
 	private double channelCharge;
+	private String channelEnableOrDisable;
 	
 	public String getChannelName() {
 		return channelName;
@@ -51,6 +52,12 @@ public class Channel {
 	}
 	public void setChannelCharge(double channelCharge) {
 		this.channelCharge = channelCharge;
+	}
+	public String getChannelEnableOrDisable() {
+		return channelEnableOrDisable;
+	}
+	public void setChannelEnableOrDisable(String channelEnableOrDisable) {
+		this.channelEnableOrDisable = channelEnableOrDisable;
 	}
 
 }
