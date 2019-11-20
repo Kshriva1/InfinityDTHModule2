@@ -57,13 +57,44 @@ CREATE TABLE SETTOPBOX_FEATURE (
 );
 
 
-insert into FEATURE values (001, 'Multi Lingual');
-insert into FEATURE values (002, 'Genre Wise Channel Guide');
-insert into FEATURE values (003, 'Live Recording');
-insert into FEATURE values (004, 'Scheduled Recording');
-insert into FEATURE values (005, 'Pause/Play');
-insert into FEATURE values (006, 'Rewind/Forward');
-insert into FEATURE values (007, 'Slow Motion');
-insert into FEATURE values (008, 'Child Lock');
-insert into FEATURE values (009, 'Preview Screen');
-insert into FEATURE values (010, 'Program Reminder');
+/* Sequence for SetTopBox table. Access using stb_seq.nextval */
+Create sequence stb_seq
+start with 1
+increment by 1
+no cycle;
+
+/* Sequence for SetTopBoxInventory */
+Create sequence stbinventory_seq
+start with 1
+increment by 1
+no cycle;
+
+/* Sequence for Package */
+Create sequence stbinventory_seq
+start with 1
+increment by 1
+no cycle;
+
+/* Sequence for Channel */
+Create sequence channel_seq
+start with 1
+increment by 1
+no cycle;
+
+/* Sequence for Feature */
+Create sequence frequency_seq
+start with 1
+increment by 1
+no cycle;
+
+/* Insertion data into features */
+insert into FEATURE values (frequency_seq.nextval, 'Multi Lingual');
+insert into FEATURE values (frequency_seq.nextval, 'Genre Wise Channel Guide');
+insert into FEATURE values (frequency_seq.nextval, 'Live Recording');
+insert into FEATURE values (frequency_seq.nextval, 'Scheduled Recording');
+insert into FEATURE values (frequency_seq.nextval, 'Pause/Play');
+insert into FEATURE values (frequency_seq.nextval, 'Rewind/Forward');
+insert into FEATURE values (frequency_seq.nextval, 'Slow Motion');
+insert into FEATURE values (frequency_seq.nextval, 'Child Lock');
+insert into FEATURE values (frequency_seq.nextval, 'Preview Screen');
+insert into FEATURE values (frequency_seq.nextval, 'Program Reminder');
