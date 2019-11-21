@@ -25,13 +25,18 @@ create table SetTopBoxInventory(
 CREATE TABLE Package (
 	pkgId number unique,
 	pkgName varchar(30) not null,
-	pkgCategory varchar (30) not null,
 	pkgChargeType varchar(20) not null,
 	pkgTransmissionType varchar(20) not null,
 	pkgCost number not null,
 	pkgFromDate date not null,
 	pkgToDate date not null,
-	pkgByDefault varchar(10) not null
+	pkgByDefault varchar(10) not null,
+	pkgCategoryId references PackageCategory(pkgcategoryId)
+);
+
+create table PackageCategory (
+	pkgCategoryId number Primary Key,
+	pkgCategoryName varchar(30)
 );
 
 CREATE TABLE Channel (
@@ -62,31 +67,37 @@ CREATE TABLE SETTOPBOX_FEATURE (
 Create sequence stb_seq
 start with 1
 increment by 1
-no cycle;
+nocycle;
 
 /* Sequence for SetTopBoxInventory */
 Create sequence stbinventory_seq
 start with 1
 increment by 1
-no cycle;
+nocycle;
+
+/* Sequence for PackageCategory */
+Create sequence packagecategory_seq
+start with 1
+increment by 1
+nocycle;
 
 /* Sequence for Package */
 Create sequence package_seq
 start with 1
 increment by 1
-no cycle;
+nocycle;
 
 /* Sequence for Channel */
 Create sequence channel_seq
 start with 1
 increment by 1
-no cycle;
+nocycle;
 
 /* Sequence for Feature */
 Create sequence frequency_seq
 start with 1
 increment by 1
-no cycle;
+nocycle;
 
 /* Insertion data into features */
 insert into FEATURE values (frequency_seq.nextval, 'Multi Lingual');
