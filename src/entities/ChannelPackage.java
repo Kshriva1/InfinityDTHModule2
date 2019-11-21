@@ -1,12 +1,13 @@
 package entities;
 
 import java.util.Date;
+import java.util.List;
 
 public class ChannelPackage {
 
 	private String pkgName;
 	private String pkgChargeType;
-	private String[] pkgCategory;
+	private List[] pkgCategory;
 	private String pkgTransmissionType;
 	private double pkgCost;
 	private Date pkgFromDate;
@@ -69,11 +70,11 @@ public class ChannelPackage {
 		this.pkgByDefault = pkgByDefault;
 	}
 
-	public String[] getPkgCategory() {
+	public List[] getPkgCategory() {
 		return pkgCategory;
 	}
 
-	public void setPkgCategory(String[] pkgCategory) {
+	public void setPkgCategory(List[] pkgCategory) {
 		this.pkgCategory = pkgCategory;
 	}
 }

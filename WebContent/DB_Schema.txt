@@ -30,8 +30,7 @@ CREATE TABLE Package (
 	pkgCost number not null,
 	pkgFromDate date not null,
 	pkgToDate date not null,
-	pkgByDefault varchar(10) not null,
-	pkgCategoryId references PackageCategory(pkgcategoryId)
+	pkgByDefault varchar(10) not null
 );
 
 create table PackageCategory (
