@@ -24,9 +24,9 @@ public class Jdbc {
 		if(arrQuery[0].equalsIgnoreCase("Select")) {
 			rs = st.executeQuery(query);
 			return rs;
-		} else if(arrQuery[0].equalsIgnoreCase("Insert") || arrQuery[0].equalsIgnoreCase("Update")) {
+		} else if(arrQuery[0].equalsIgnoreCase("Insert") || arrQuery[0].equalsIgnoreCase("Update") || arrQuery[0].equalsIgnoreCase("Delete")) {
 			int i = st.executeUpdate(query);
-			System.out.println(i + " number of rows are affected");
+			System.out.println(i + " rows are affected");
 			return rs;
 		}
 		return rs;

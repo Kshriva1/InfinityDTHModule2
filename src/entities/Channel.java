@@ -14,6 +14,7 @@ public class Channel {
 	public String getChannelName() {
 		return channelName;
 	}
+	
 	public void setChannelName(String channelName) {
 		this.channelName = channelName;
 	}
@@ -59,5 +60,6 @@ public class Channel {
 	public void setChannelEnableOrDisable(String channelEnableOrDisable) {
 		this.channelEnableOrDisable = channelEnableOrDisable;
 	}
+
 
 }
