@@ -5,6 +5,7 @@ public class SetTopBox {
     public String STBType;
     public double STBlength;
     public double STBbreadth;
+    public String[] STBFeatures;
     public double STBwidth;
     public double price;
     public double installationCharges;
@@ -72,5 +73,11 @@ public class SetTopBox {
 	}
 	public void setRefundAmount(double refundAmount) {
 		this.refundAmount = refundAmount;
+	}
+	public String[] getSTBFeatures() {
+		return STBFeatures;
+	}
+	public void setSTBFeatures(String[] sTBFeatures) {
+		STBFeatures = sTBFeatures;
 	}
 }

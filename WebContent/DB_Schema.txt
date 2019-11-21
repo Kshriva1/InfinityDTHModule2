@@ -39,6 +39,11 @@ create table PackageCategory (
 	pkgCategoryName varchar(30)
 );
 
+CREATE TABLE Package_PackageCategory (
+	PkgId NUMBER REFERENCES Package (pkgId),
+	pkgCategoryId NUMBER REFERENCES FEATURE (pkgCategoryId)
+);
+
 CREATE TABLE Channel (
 	channelId number unique,
 	channelName varchar(30) not null,
