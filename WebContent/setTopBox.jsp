@@ -8,11 +8,12 @@
 <link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
 <body>
+	<br><br><br><br>
 	<h1 style="text-align:center">Manage Set Top Box</h1>
 	<div class="Center">
-	<a href="addSetTopBox.jsp">Add Set Top Box Information</a><br>
-	<a href="viewSetTopBox.jsp" style="margin-top:50px"> View Set Top Box Information</a><br>
-	<a href="UpdateSTB.jsp" style="margin-top:50px"> Update Set Top Box Information</a><br>
+	<a href="addSetTopBox.jsp">Add Set Top Box Information</a><br><br>
+	<a href="viewSetTopBox.jsp" style="margin-top:50px"> View Set Top Box Information</a><br><br>
+	<a href="UpdateSTB.jsp" style="margin-top:50px"> Update Set Top Box Information</a><br><br>
 	<a href="deleteSTB.jsp" style="margin-top:50px"> Delete Set Top Box Information</a><br>
 	</div>
 </body>

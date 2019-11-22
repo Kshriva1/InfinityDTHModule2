@@ -8,11 +8,12 @@
 <link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
 <body>
+<br><br><br><br>
 <h1 style="text-align:center">Welcome to Infinity DTH Admin Services!</h1>
     <div class="Center">
-	<a href="setTopBox.jsp"> Manage Set Top Box</a>
-	<a href="channel.jsp" style="margin-left:30px"> Manage Channels</a>
-	<a href="package.jsp" style="margin-left:30px"> Manage Packages</a>
+		<a href="setTopBox.jsp"> Manage Set Top Box</a>
+		<a href="channel.jsp" style="margin-left:30px"> Manage Channels</a>
+		<a href="package.jsp" style="margin-left:30px"> Manage Packages</a>
 	</div>
 </body>
 </html>

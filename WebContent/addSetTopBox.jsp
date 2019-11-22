@@ -19,15 +19,15 @@
 	</tr>
 	<tr>
 		<td>Enter STB Length : </td>
-		<td><input type="text" name="stbLength"></td>
+		<td><input type="text" name="stbLength" required></td>
 	</tr>
 	<tr>
 		<td>Enter STB Breadth : </td>
-		<td><input type="text" name="stbBreadth"></td>
+		<td><input type="text" name="stbBreadth" required></td>
 	</tr>
 	<tr>
 		<td>Enter STB Width : </td>
-		<td><input type="text" name="stbWidth"></td>
+		<td><input type="text" name="stbWidth" required></td>
 	</tr>
 	<tr>
 		<td>Select features of this STB : </td>
@@ -44,19 +44,19 @@
 	</tr>
 	<tr>
 		<td>Enter the cost of selected STB Type : </td>
-		<td>$<input type="text" name="stbPrice"></td>
+		<td>$<input type="text" name="stbPrice" required></td>
 	</tr>
 	<tr>
 		<td>Enter Installation Charges : </td>
-		<td>$<input type="text" name="installCharges"></td>
+		<td>$<input type="text" name="installCharges" required></td>
 	</tr>
 	<tr>
 		<td>Enter Updation Charges : </td>
-		<td>$<input type="text" name="updateCharges"></td>
+		<td>$<input type="text" name="updateCharges" required></td>
 	</tr>
 	<tr>
 		<td>Enter Percentage Discount : </td>
-		<td><input type="text" name="percentageDicount">%</td>
+		<td><input type="text" name="percentageDicount" required>%</td>
 	</tr>
 	<tr>
 		<td>Select Billing Type Availability : </td>
@@ -65,12 +65,12 @@
 	</tr>
 	<tr>
 		<td>Enter Refundable Deposit Amount (if post-paid) : </td>
-		<td>$<input type="text" name="refundAmount"></td>
+		<td>$<input type="text" name="refundAmount" required></td>
 	</tr>
 	</table>
 	<input type="hidden" name="option" value="settopbox">
 	<input type="hidden" name="crud" value="add">
-	<input type="submit" value="Submit" >
+	<input type="submit" value="Submit">
 	</form>
 </body>
 </html>
