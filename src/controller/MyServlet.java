@@ -56,7 +56,6 @@ public class MyServlet extends HttpServlet {
 			stblogic = new SetTopBoxLogic();
 
 			if (crud.equals("add")) {
-                 System.out.println("Im here");
 				List<String> list = new ArrayList<>();
 				String stbType = request.getParameter("stbType");
 				System.out.println(stbType);

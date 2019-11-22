@@ -1,6 +1,6 @@
 create table SetTopBox (
 	setTopBoxId number primary key,
-	STBType varchar(20) not null,
+	STBType varchar(50) not null,
 	STBlength number not null,
 	STBbreadth number not null,
 	STBwidth number not null,
