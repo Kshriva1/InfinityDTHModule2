@@ -2,21 +2,23 @@ package Logic;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import entities.Channel;
-import utility.Jdbc;
+import utility.JdbcDTH;
 
 public class ChannelLogic {
 
-	public boolean createChannel(String channelName, String channelBand, double videoFrequency, double audioFrequency,
+	public boolean addChannel(String channelName, String channelBand, double videoFrequency, double audioFrequency,
 			String channelChargeType, String channelTransmissionType, double channelCharge,
 			String channelEnableOrDisable, String pkgName) {
 		long pkgId = 0;
-		String query1 = "Select pkgId from Package where pkName=" + pkgName;
+		String query1 = "Select pkgId from Package where pkgName=" + pkgName;
 		try {
-			ResultSet rs1 = Jdbc.executeDTHQueries(query1);
+			ResultSet rs1 = JdbcDTH.executeDTHQueries(query1);
 			pkgId = rs1.getInt(1);
-		} catch (ClassNotFoundException | SQLException e1) {
+		} catch (SQLException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
@@ -26,9 +28,9 @@ public class ChannelLogic {
 				+ "," + "'" + channelTransmissionType + "'" + "," + channelCharge + "'" + channelEnableOrDisable + "'"
 				+ "," + pkgId + ")";
 		try {
-			Jdbc.executeDTHQueries(query);
+			JdbcDTH.executeDTHQueries(query);
 			return true;
-		} catch (ClassNotFoundException | SQLException e) {
+		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -37,14 +39,15 @@ public class ChannelLogic {
 
 	}
 
-	public Channel readChannel(String channelName) {
+	public List<Channel> viewChannel() {
 
-		Channel channel = new Channel();
-
-		String query2 = "Select * from Channel where channelName=" + channelName;
+		List<Channel> channelList = new ArrayList<>();
+		Channel channel;
+		String query2 = "Select * from Channel";
 		try {
-			ResultSet rs = Jdbc.executeDTHQueries(query2);
+			ResultSet rs = JdbcDTH.executeDTHQueries(query2);
 			while (rs.next()) {
+				channel = new Channel();
 				channel.setChannelName(rs.getString(2));
 				channel.setChannelBand(rs.getString(3));
 				channel.setVideoFrequency(rs.getInt(4));
@@ -53,24 +56,25 @@ public class ChannelLogic {
 				channel.setChannelTransmissionType(rs.getString(7));
 				channel.setChannelCharge(rs.getInt(8));
 				channel.setChannelEnableOrDisable(rs.getString(9));
+				channelList.add(channel);
 			}
-		} catch (ClassNotFoundException | SQLException e) {
+		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return channel;
+		return channelList;
 	}
 
-	public boolean updateChannel(String oldChannelName, String newChannelName, String newChannelBand,
+	public boolean updateChannel(String newChannelName, String newChannelBand,
 			double newVideoFrequency, double newAudioFrequency, String newChannelChargeType,
-			String newChannelTransmissionType, double newChannelCharge, String newChannelEnableOrDisable) {
+			String newChannelTransmissionType, double newChannelCharge, String newChannelEnableOrDisable, String oldChannelName) {
 
 		long channelId = 0;
 		String query1 = "Select channelId from Channel where channelName=" + oldChannelName;
 		try {
-			ResultSet rs = Jdbc.executeDTHQueries(query1);
+			ResultSet rs = JdbcDTH.executeDTHQueries(query1);
 			channelId = rs.getInt(1);
-		} catch (ClassNotFoundException | SQLException e) {
+		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -82,9 +86,9 @@ public class ChannelLogic {
 				+ "'" + newChannelEnableOrDisable + "'" + "where channelId = " + channelId;
 		
 		try {
-			Jdbc.executeDTHQueries(query2);
+			JdbcDTH.executeDTHQueries(query2);
 			return true;
-		} catch (ClassNotFoundException | SQLException e) {
+		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -96,9 +100,9 @@ public class ChannelLogic {
 		
 		String query = "Delete from Channel where channelName=" + channelName;
 		try {
-			Jdbc.executeDTHQueries(query);
+			JdbcDTH.executeDTHQueries(query);
 			return true;
-		} catch (ClassNotFoundException | SQLException e) {
+		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

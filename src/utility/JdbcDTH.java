@@ -5,20 +5,26 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class Jdbc {
+public class JdbcDTH {
 	public static Connection con = null;
 	public static Statement st = null;
 	public static ResultSet rs = null;
 	
-	public static ResultSet executeDTHQueries(String query) throws ClassNotFoundException, SQLException {
+	public static ResultSet executeDTHQueries(String query) throws SQLException {
 		String driverInfo = "oracle.jdbc.OracleDriver";
 		String url = "jdbc:oracle:thin:@localhost:1521:xe";
 		String uname = "system";
 		String pwd = "tcs12345"; 
 		
-		Class.forName(driverInfo);
+		try {
+			Class.forName(driverInfo);
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
-		con = DriverManager.getConnection(driverInfo);
+		con = DriverManager.getConnection(url,uname,pwd);
+		System.out.println("Connection created successfully");
 		st = con.createStatement();
 		String[] arrQuery = query.split(" ");
 		if(arrQuery[0].equalsIgnoreCase("Select")) {

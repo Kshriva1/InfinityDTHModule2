@@ -7,7 +7,7 @@ public class SetTopBox {
     public String STBType;
     public double STBlength;
     public double STBbreadth;
-    public List[] STBFeatures;
+    public List<String> STBFeatures;
     public double STBwidth;
     public double price;
     public double installationCharges;
@@ -20,25 +20,25 @@ public class SetTopBox {
 		return STBType;
 	}
 	public void setSTBType(String sTBType) {
-		STBType = sTBType;
+		this.STBType = sTBType;
 	}
 	public double getSTBlength() {
 		return STBlength;
 	}
 	public void setSTBlength(double sTBlength) {
-		STBlength = sTBlength;
+		this.STBlength = sTBlength;
 	}
 	public double getSTBbreadth() {
 		return STBbreadth;
 	}
 	public void setSTBbreadth(double sTBbreadth) {
-		STBbreadth = sTBbreadth;
+		this.STBbreadth = sTBbreadth;
 	}
 	public double getSTBwidth() {
 		return STBwidth;
 	}
 	public void setSTBwidth(double sTBwidth) {
-		STBwidth = sTBwidth;
+		this.STBwidth = sTBwidth;
 	}
 	public double getPrice() {
 		return price;
@@ -76,10 +76,10 @@ public class SetTopBox {
 	public void setRefundAmount(double refundAmount) {
 		this.refundAmount = refundAmount;
 	}
-	public List[] getSTBFeatures() {
+	public List<String> getSTBFeatures() {
 		return STBFeatures;
 	}
-	public void setSTBFeatures(List[] sTBFeatures) {
-		STBFeatures = sTBFeatures;
+	public void setSTBFeatures(List<String> STBFeatures) {
+		this.STBFeatures = STBFeatures;
 	}
 }

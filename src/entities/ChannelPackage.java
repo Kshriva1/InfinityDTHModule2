@@ -7,7 +7,7 @@ public class ChannelPackage {
 
 	private String pkgName;
 	private String pkgChargeType;
-	private List[] pkgCategory;
+	private List<String> pkgCategoryList;
 	private String pkgTransmissionType;
 	private double pkgCost;
 	private Date pkgFromDate;
@@ -70,11 +70,11 @@ public class ChannelPackage {
 		this.pkgByDefault = pkgByDefault;
 	}
 
-	public List[] getPkgCategory() {
-		return pkgCategory;
+	public List<String> getPkgCategory() {
+		return pkgCategoryList;
 	}
 
-	public void setPkgCategory(List[] pkgCategory) {
-		this.pkgCategory = pkgCategory;
+	public void setPkgCategory(List<String> pkgCategoryList) {
+		this.pkgCategoryList = pkgCategoryList;
 	}
 }
