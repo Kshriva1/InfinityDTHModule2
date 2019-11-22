@@ -139,21 +139,25 @@ public class SetTopBoxLogic {
 	public boolean deleteSetTopBox(String name) {
 
 		try {
-			String idQuery = "Select setTopBoxId from SetTopBox where STBType=" + name;
+			String idQuery = "Select setTopBoxId from SetTopBox where STBType='" + name + "'";
 			ResultSet id = JdbcDTH.executeDTHQueries(idQuery);
+			while(id.next()) {
+				
+				// Create query to remove particular Set Top Box from setTopBox Table
+				String deleteBoxQuery = "DELETE FROM setTopBox WHERE setTopBoxId=" + id.getInt(1);
 
-			// Create query to remove particular Set Top Box from setTopBox Table
-			String deleteBoxQuery = "DELETE FROM setTopBox WHERE setTopBoxId=" + id.getInt(1);
+				// Create query to remove features for a particular Set Top Box from
+				// setTopBox_feature Table
+				//String deleteFeaturesQuery = "DELETE FROM setTopBox_feature WHERE setTopBoxId=" + id.getInt(1);
 
-			// Create query to remove features for a particular Set Top Box from
-			// setTopBox_feature Table
-			String deleteFeaturesQuery = "DELETE FROM setTopBox_feature WHERE setTopBoxId=" + id.getInt(1);
-
-			// Call utility class to connect to the database and receive ResultSet object
-			JdbcDTH.executeDTHQueries(deleteBoxQuery);
-			JdbcDTH.executeDTHQueries(deleteFeaturesQuery);
-			return true;
+				// Call utility class to connect to the database and receive ResultSet object
+				JdbcDTH.executeDTHQueries(deleteBoxQuery);
+				//JdbcDTH.executeDTHQueries(deleteFeaturesQuery);
+				return true;
+			}
+			
 		} catch (Exception e) {
+			System.out.println("DELETE");
 			System.err.println("Exception thrown : " + e);
 		}
 		return false;

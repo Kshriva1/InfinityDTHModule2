@@ -90,19 +90,20 @@ public class MyServlet extends HttpServlet {
 				rd.forward(request, response);
 				
 			} else if (crud.equals("update")) {
-				String stbType = request.getParameter("stbType");
+				String stbOldType = request.getParameter("oldType");
+				String stbNewType = request.getParameter("newType");
+				System.out.println(stbNewType);
 				int stbLength = Integer.parseInt(request.getParameter("stbLength"));
 				int stbBreadth = Integer.parseInt(request.getParameter("stbBreadth"));
 				int stbWidth = Integer.parseInt(request.getParameter("stbWidth"));
-				int stbPrice = Integer.parseInt(request.getParameter("stbPrice"));
+				double stbPrice = Double.parseDouble(request.getParameter("stbPrice"));
 				double installCharges = Double.parseDouble(request.getParameter("installCharges"));
 				double upateCharges = Double.parseDouble(request.getParameter("upateCharges"));
 				int percentageDicount = Integer.parseInt(request.getParameter("percentageDicount"));
 				String billingType = request.getParameter("billingType");
 				double refundAmount = Double.parseDouble(request.getParameter("refundAmount"));
-				String updateName = request.getParameter("updateName");
 
-				value = stblogic.updateSetTopBox(stbType, updateName, stbLength, stbBreadth, stbWidth, stbPrice, installCharges, upateCharges,
+				value = stblogic.updateSetTopBox(stbOldType, stbNewType, stbLength, stbBreadth, stbWidth, stbPrice, installCharges, upateCharges,
 						percentageDicount, billingType, refundAmount);
 				
 				if(value) {
@@ -114,7 +115,7 @@ public class MyServlet extends HttpServlet {
 				}
 
 			} else if (crud.equals("delete")) {
-				String deleteName = request.getParameter("deleteName");
+				String deleteName = request.getParameter("Type");
 				value = stblogic.deleteSetTopBox(deleteName);
 				if(value) {
 					rd = request.getRequestDispatcher("Success.jsp");
