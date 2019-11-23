@@ -40,19 +40,21 @@ public class ChannelPackageLogic {
 				channelPkg.setPkgFromDate(channelPackageInfo.getDate(6));
 				channelPkg.setPkgToDate(channelPackageInfo.getDate(7));
 				channelPkg.setPkgByDefault(channelPackageInfo.getString(8));
-				
-				categoriesQuery = "Select pkgCategoryId from Package_PackageCategory where PkgId=" + channelPackageInfo.getInt(1);
-                categoryId = JdbcDTH.executeDTHQueries(categoriesQuery);
-                while(categoryId.next()) {
-                	categoryQuery = "Select pkgCategoryName from PackageCategory where pkgCategoryId=" + categoryId.getInt(1);
-                	category = JdbcDTH.executeDTHQueries(categoryQuery);
-                	while(category.next()) {
-                		pkgCategoryList.add(category.getString(1));
-                	}
-                }
-                
-                channelPkg.setPkgCategory(pkgCategoryList);
-				
+
+				categoriesQuery = "Select pkgCategoryId from Package_PackageCategory where PkgId="
+						+ channelPackageInfo.getInt(1);
+				categoryId = JdbcDTH.executeDTHQueries(categoriesQuery);
+				while (categoryId.next()) {
+					categoryQuery = "Select pkgCategoryName from PackageCategory where pkgCategoryId="
+							+ categoryId.getInt(1);
+					category = JdbcDTH.executeDTHQueries(categoryQuery);
+					while (category.next()) {
+						pkgCategoryList.add(category.getString(1));
+					}
+				}
+
+				channelPkg.setPkgCategory(pkgCategoryList);
+
 				pkgList.add(channelPkg);
 
 			}
@@ -113,17 +115,18 @@ public class ChannelPackageLogic {
 			// Get the id of the SetTopBox we want to update
 			String pkgId = "SELECT pkgId FROM Package WHERE STBType=" + oldPkgName;
 			ResultSet id = JdbcDTH.executeDTHQueries(pkgId);
+			while (id.next()) {
+				// Create query to update information about particular Set Top Box
+				String updateQuery = "UPDATE Package Set pkgName=" + "'" + newPkgName + "'" + "," + "pkgChargeType="
+						+ "'" + newPkgChargeType + "'" + "," + "pkgTransmissionType=" + "'" + newPkgTransmissionType
+						+ "'" + "," + "pkgCost=" + newPkgCost + "," + "pkgFromDate=" + "'" + newPkgFromDate + "'" + ","
+						+ "pkgToDate=" + "'" + newPkgToDate + "'" + "," + "pkgByDefault=" + "'" + newPkgByDefault + "'"
+						+ "where pkgId=" + id.getInt(1);
 
-			// Create query to update information about particular Set Top Box
-			String updateQuery = "UPDATE Package Set pkgName=" + "'" + newPkgName + "'" + "," + "pkgChargeType=" + "'"
-					+ newPkgChargeType + "'" + "," + "pkgTransmissionType=" + "'" + newPkgTransmissionType + "'" + ","
-					+ "pkgCost=" + newPkgCost + "," + "pkgFromDate=" + "'" + newPkgFromDate + "'" + "," + "pkgToDate="
-					+ "'" + newPkgToDate + "'" + "," + "pkgByDefault=" + "'" + newPkgByDefault + "'" + "where pkgId="
-					+ id.getInt(1);
-
-			// Call utility class to connect to the database and receive ResultSet object
-			JdbcDTH.executeDTHQueries(updateQuery);
-			return true;
+				// Call utility class to connect to the database and receive ResultSet object
+				JdbcDTH.executeDTHQueries(updateQuery);
+				return true;
+			}
 		} catch (Exception e) {
 			System.err.println("Exception thrown : " + e);
 		}

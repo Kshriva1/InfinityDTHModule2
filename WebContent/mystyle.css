@@ -1,9 +1,52 @@
 body {
-background: rgb(131,58,180);
-background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+background: #f9f3fc13158180;
 	
 }
 
 .Center{
 	text-align: center;
+}
+
+h1 {
+	margin: 50px 0px;
+	font-family: 'Roboto';
+	font-weight: 500;
+}
+
+.home {
+	text-decoration: none;
+	font-size: 20px;
+	font-family: 'Roboto';
+	text-transform: uppercase;
+	color: #747474;
+}
+
+.home:hover {
+	color: #000;
+	transition: .5s ease in-out;
+}
+
+a {
+	text-decoration: none;
+	font-size: 20px;
+	font-family: 'Roboto';
+	text-transform: uppercase;
+	color: #747474;
+	padding: 5px;
+}
+
+.mode {
+	text-align:left;
+}
+
+form {
+	margin:  0 auto;
+}
+
+tr {
+	padding: 5px;
+}
+
+.del {
+	margin-top: 50px;
 }

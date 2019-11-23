@@ -114,3 +114,16 @@ insert into FEATURE values (frequency_seq.nextval, 'Slow Motion');
 insert into FEATURE values (frequency_seq.nextval, 'Child Lock');
 insert into FEATURE values (frequency_seq.nextval, 'Preview Screen');
 insert into FEATURE values (frequency_seq.nextval, 'Program Reminder');
+
+/* Insert data into package */
+insert into PACKAGE values (package_seq.nextval, 'Kids', 'Paid by default', 'Standard', 2, '2019-01-01', '2020-12-31', 'True');
+insert into PACKAGE values (package_seq.nextval, 'Regional', 'Freet to air', 'Standard', 0, 2019-06-01', '2024-05-31', 'False');
+insert into PACKAGE values (package_seq.nextval, 'Informative', 'Free to air', 'HD', 0, '2019-01-01' '2028-12-31', 'True');
+insert into PACKAGE values (package_seq.nextval, 'Music', 'Paid by default', 'HD', 5, '2019-06-01', '2024-05-31', 'False');
+insert into PACKAGE values (package_seq.nextval, 'Movies', 'Paid by default', 'HD', 8, '2019-01-01', '2028-12-31');
+
+/* Insert data into channel */
+insert into CHANNEL values (channel_seq, 'Disney','I', 65, 70, 'Paid', 'Standard', 1, 'Enabled', 1 );
+insert into CHANNEL values (channel_seq, 'Discovery', 'II', 100, 105, 'Free to air', 'HD', 0, 'Disabled', 3);
+insert into CHANNEL values (channel_seq, 'MTV', 'III', 125, 130, 'Paid', 'HD', 2, 'Enabled', 4);
+insert into CHANNEL values (channel_seq, 'History TV', 200, 205, 'Free to air', 0, 'Enabled', 3);

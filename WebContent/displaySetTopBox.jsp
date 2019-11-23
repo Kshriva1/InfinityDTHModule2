@@ -39,8 +39,6 @@
      <br><br>
      Refund Amount: <span><%= setTopBox.getRefundAmount() %></span>
      <br><br>
-     Features: <span><%= setTopBox.getSTBFeatures().toString() %></span>
-     <br><br>
     </td>
     
   </tr>
