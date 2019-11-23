@@ -39,16 +39,16 @@
 	</tr>
 	<tr>
 		<td>Select features of this STB : </td>
-		<td><input type="checkbox" name="feature" value="multiLingual">Multi-lingual<br>
-		<input type="checkbox" name="feature" value="genreWiseChannelGuide">Genre Wise Channel Guide<br>
-		<input type="checkbox" name="feature" value="liveRecording">Live Recording<br>
-		<input type="checkbox" name="feature" value="sceduledRecording">Scheduled Recording<br>
-		<input type="checkbox" name="feature" value="pausePlay">Pause/Play<br>
-		<input type="checkbox" name="feature" value="rewindForward">Rewind/Forward<br>
-		<input type="checkbox" name="feature" value="slowMotion">Slow Motion<br>
-		<input type="checkbox" name="feature" value="childLock">Child Lock<br>
-		<input type="checkbox" name="feature" value="previewScreen">Preview Screen<br>
-		<input type="checkbox" name="feature" value="programReminder">Program Reminder</td>
+		<td><input type="checkbox" name="feature" value="Multi Lingual">Multi-Lingual<br>
+		<input type="checkbox" name="feature" value="Genre Wise Channel Guide">Genre Wise Channel Guide<br>
+		<input type="checkbox" name="feature" value="Live Recording">Live Recording<br>
+		<input type="checkbox" name="feature" value="Scheduled Recording">Scheduled Recording<br>
+		<input type="checkbox" name="feature" value="Pause/Play">Pause/Play<br>
+		<input type="checkbox" name="feature" value="Rewind/Forward">Rewind/Forward<br>
+		<input type="checkbox" name="feature" value="Slow Motion">Slow Motion<br>
+		<input type="checkbox" name="feature" value="Child Lock">Child Lock<br>
+		<input type="checkbox" name="feature" value="Preview Screen">Preview Screen<br>
+		<input type="checkbox" name="feature" value="Program Reminder">Program Reminder</td>
 	</tr>
 	<tr>
 		<td>Enter the cost of selected STB Type : </td>

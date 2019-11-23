@@ -8,10 +8,9 @@
 <link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
 <body>
-<div class="Center">
 <table>
 
-	<%-- Displaying Books --%>
+	<%-- Displaying SetTopBox's --%>
 	<%
 	    List<SetTopBox> mySetTopBoxs = (List<SetTopBox>)request.getAttribute("settopbox");
 		for(SetTopBox setTopBox: mySetTopBoxs){
@@ -39,6 +38,8 @@
      <br><br>
      Refund Amount: <span><%= setTopBox.getRefundAmount() %></span>
      <br><br>
+     Features: <span><%= setTopBox.getSTBFeatures().toString().replace("[","").replace("]","") %></span>
+     <br><br>
     </td>
     
   </tr>
@@ -49,6 +50,5 @@
 		}  
   %>
 </table>
-</div>
 </body>
 </html>

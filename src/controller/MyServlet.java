@@ -57,7 +57,7 @@ public class MyServlet extends HttpServlet {
 			stblogic = new SetTopBoxLogic();
 
 			if (crud.equals("add")) {
-				System.out.println("Here");
+				
 				List<String> list = new ArrayList<>();
 				String stbType = request.getParameter("stbType");
 				System.out.println(stbType);
@@ -91,9 +91,9 @@ public class MyServlet extends HttpServlet {
 				rd.forward(request, response);
 				
 			} else if (crud.equals("update")) {
+				List<String> listUpdateFeatures = new ArrayList<>();
 				String stbOldType = request.getParameter("oldType");
 				String stbNewType = request.getParameter("newType");
-				System.out.println(stbNewType);
 				int stbLength = Integer.parseInt(request.getParameter("stbLength"));
 				int stbBreadth = Integer.parseInt(request.getParameter("stbBreadth"));
 				int stbWidth = Integer.parseInt(request.getParameter("stbWidth"));
@@ -103,9 +103,11 @@ public class MyServlet extends HttpServlet {
 				int percentageDicount = Integer.parseInt(request.getParameter("percentageDicount"));
 				String billingType = request.getParameter("billingType");
 				double refundAmount = Double.parseDouble(request.getParameter("refundAmount"));
+				String[] features = request.getParameterValues("feature");
+				listUpdateFeatures = Arrays.asList(features);
 
 				value = stblogic.updateSetTopBox(stbOldType, stbNewType, stbLength, stbBreadth, stbWidth, stbPrice, installCharges, updateCharges,
-						percentageDicount, billingType, refundAmount);
+						percentageDicount, billingType, refundAmount, listUpdateFeatures);
 				
 				if(value) {
 					rd = request.getRequestDispatcher("Success.jsp");
