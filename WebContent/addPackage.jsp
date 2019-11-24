@@ -13,32 +13,28 @@
 <center><h1>Infinity DTH</h1></center></div><br><br>
 	<table class="info">
 	<tr>
-		<td style="color:rgba(255,0,0,0.8)">Enter Package Id :</td>
-		<td><input type="text" name="packageId"></td>
-	</tr>
-	<tr>
 		<td style="color:rgba(255,0,0,0.8)">Enter Package Name : </td>
 		<td><input type="text" name="packageName" >  <br>
 	</tr>
 	<tr>
 		<td style="color:rgba(255,0,0,0.8)">Select Package Category</td>
-		<td><select name="packageCategory"> Package Category
-		<option value="Kids"> Kids
-		<option value="Regional"> Regional
-		<option value="Informative"> Informative
-		<option value="Music"> Music
-		<option value="Movies"> Movies
-		</select></td>
+		<td>
+		<input type="checkbox" name="packageCategory" value="Kids">Kids<br>
+		<input type="checkbox" name="packageCategory" value="Regional">Regional<br>
+		<input type="checkbox" name="packageCategory" value="Informative">Informative<br>
+		<input type="checkbox" name="packageCategory" value="Music">Music<br>
+		<input type="checkbox" name="packageCategory" value="Movies">Movies<br>
+		</td>
 	</tr>
 	<tr>
 		<td style="color:rgba(255,0,0,0.8)">Select Package Charge Type : </td>
-		<td><input type="radio" name="packageChargeType" >Paid by default<br>
-		<input type="radio" name="packageChargeType" >FTA </td>
+		<td><input type="radio" name="packageChargeType" value="Paid by default">Paid by default<br>
+		<input type="radio" name="packageChargeType" value="FTA">FTA </td>
 	</tr>
 	<tr>
 		<td style="color:rgba(255,0,0,0.8)">Select Package Transmission Type : </td>
-		<td><input type="radio" name="packageTransmissionType" >HD <br>
-		<input type ="radio" name = "packageTransmissionType" >Standard </td>
+		<td><input type="radio" name="packageTransmissionType" value="HD">HD <br>
+		<input type ="radio" name = "packageTransmissionType" value="Standard">Standard </td>
 	</tr>
 
 	<tr>
@@ -48,8 +44,7 @@
 	
 	<tr>
 		<td style="color:rgba(255,0,0,0.8)">Package Available from date : </td>
-		<td><input type="date" name="packageFromDate" ><br>
-		
+		<td><input type="date" name="packageFromDate"><br>
 	</tr>
 	<tr>
 		<td style="color:rgba(255,0,0,0.8)">Package Available to date  : </td>
@@ -57,13 +52,15 @@
 	</tr>
 	<tr>
 		<td style="color:rgba(255,0,0,0.8)">Added by default  : </td>
-		<td><input type="radio" name="packageByDefault">Yes<br>
-		<input type ="radio" name= "packageByDefault">No</td>
+		<td><input type="radio" name="packageByDefault" value="Yes">Yes<br>
+		<input type ="radio" name= "packageByDefault" value="No">No</td>
 	</tr>
 	
 	</table>
 	<br>
 	<br>
+	<input type="hidden" name="option" value="package">
+	<input type="hidden" name="crud" value="add">
 	<center><input class="btn" type="submit" value="Submit"></center>
 	</form>
 </body>

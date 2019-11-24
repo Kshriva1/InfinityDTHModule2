@@ -194,8 +194,8 @@ public class MyServlet extends HttpServlet {
 				Date fromdate = Date.valueOf(packageFromDate);
 				String packageToDate = request.getParameter("packageToDate");
 				Date todate = Date.valueOf(packageToDate);
-				String packageByDefault = request.getParameter("byDefault");
-				String[] categories = request.getParameterValues("categories");
+				String packageByDefault = request.getParameter("packageByDefault");
+				String[] categories = request.getParameterValues("packageCategory");
 				listCategories = Arrays.asList(categories);
 				value = pkglogic.addPkg(packageName, packageChargeType, packageTransmissionType,
 						packagePrice, fromdate, todate, packageByDefault, listCategories);
@@ -210,24 +210,27 @@ public class MyServlet extends HttpServlet {
 			} else if (crud.equals("view")) {
 				List<ChannelPackage> channelPackageList = pkglogic.view();
 				request.setAttribute("package", channelPackageList);
-				rd = request.getRequestDispatcher("disaplayPackages.jsp");
+				rd = request.getRequestDispatcher("displayPackages.jsp");
 				rd.forward(request, response);
 				
 			} else if (crud.equals("update")) {
+				List<String> listUpdateCategories = new ArrayList<>();
 				String packageName = request.getParameter("packageName");
-				String packageCategory = request.getParameter("packageCategory");
 				String packageChargeType = request.getParameter("packageChargeType");
 				String packageTransmissionType = request.getParameter("packageTransmissionType");
 				int packagePrice = Integer.parseInt(request.getParameter("packagePrice"));
 				String packageFromDate = request.getParameter("packageFromDate");
+				System.out.println(packageFromDate);
 				Date fromdate = Date.valueOf(packageFromDate);
 				String packageToDate = request.getParameter("packageToDate");
 				Date todate = Date.valueOf(packageToDate);
-				String packageByDefault = request.getParameter("byDefault");
-				String updateName = request.getParameter("updateName");
+				String packageByDefault = request.getParameter("packageByDefault");
+				String updateName = request.getParameter("packageUpdateName");
+				String[] categories = request.getParameterValues("packageCategory");
+				listUpdateCategories = Arrays.asList(categories);
 
-				value = pkglogic.updateChannelPackage(packageName, updateName, packageChargeType, packageTransmissionType,
-						packagePrice, fromdate, todate, packageByDefault);
+				value = pkglogic.updateChannelPackage(updateName, packageName, packageChargeType, packageTransmissionType,
+						packagePrice, fromdate, todate, packageByDefault,listUpdateCategories);
 				
 				if(value) {
 					rd = request.getRequestDispatcher("Success.jsp");

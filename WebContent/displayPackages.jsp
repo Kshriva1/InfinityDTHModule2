@@ -1,4 +1,4 @@
-<%@ page import="entities.ChannelPackage,java.util.List" language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page import="entities.ChannelPackage,java.util.List,java.sql.Date" language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
