@@ -16,7 +16,7 @@
 <div class="Center">
  <h1 style="text-align:center">Click to view Package Details</h1>
  <form action="MyServlet" method="get">
- <input type="hidden" name="option" value="settopbox">
+ <input type="hidden" name="option" value="package">
  <input type="hidden" name="crud" value="view">
  <input type="submit" value="Click">
  </form>

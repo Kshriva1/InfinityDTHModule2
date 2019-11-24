@@ -50,6 +50,8 @@
 		<td>$<input type="text" name="channelCharge"></td>
 	</tr>
 	</table><br><br>
+	<input type="hidden" name="option" value="channel">
+	<input type="hidden" name="crud" value="add">
 	<center><input class="btn" type="submit" value="Submit"></center>
 	</form>
 </body>

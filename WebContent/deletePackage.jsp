@@ -17,18 +17,19 @@ function msgDialog(){
 </script>
 
 <body>
-	<form action=msgDialog()>
+	<form action="MyServlet" method="get">
 	<div class ="title">
 <center><h1>Infinity DTH</h1></center></div><br><br>
 		<table class="info">
 			<tr>
 				<td style="color:rgba(255,0,0,0.8)">Enter Package name you want to delete : </td>
-				<td><input type="text" name="pkgName"></td>
+				<td><input type="text" name="deleteName"></td>
 			</tr>
 			
 		</table><br><br>
-		<center><input class="btn" type="submit" value="Delete" onclick="MyServlet.java"></center>
-		<input type="hidden" name="stbAction" value="deleteChannel">
+		<input type="hidden" name="option" value="package">
+	    <input type="hidden" name="crud" value="delete">
+		<center><input class="btn" type="submit" value="Delete"></center>
 	</form>
 </body>
 </html>
