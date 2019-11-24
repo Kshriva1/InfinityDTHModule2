@@ -40,7 +40,7 @@ create table PackageCategory (
 
 CREATE TABLE Package_PackageCategory (
 	PkgId NUMBER REFERENCES Package (pkgId),
-	pkgCategoryId NUMBER REFERENCES FEATURE (pkgCategoryId)
+	pkgCategoryId NUMBER REFERENCES PackageCategory (pkgCategoryId)
 );
 
 CREATE TABLE Channel (
@@ -53,7 +53,7 @@ CREATE TABLE Channel (
 	channelTransmissionType varchar (20) not null,
 	channelCharge number not null,
 	channelEnableOrDisable varchar(50) not null,
-	packageId references Package(pkgId)
+	categoryId references PackageCategory(pkgCategoryId)
 );
 
 CREATE TABLE FEATURE (

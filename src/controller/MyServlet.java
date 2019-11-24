@@ -132,7 +132,7 @@ public class MyServlet extends HttpServlet {
 			break;
 
 		case "channel":
-
+			System.out.println("CHANNEL HEREEE");
 			chlogic = new ChannelLogic();
 
 			
@@ -143,19 +143,20 @@ public class MyServlet extends HttpServlet {
 				rd.forward(request, response);
 				
 			} else if (crud.equals("update")) {
-	
-				String channelName = request.getParameter("channelName");
+				System.out.println("HEREEE");
+				String oldName = request.getParameter("oldName");
+				String newName = request.getParameter("newName");
 				String channelBand = request.getParameter("channelBand");
 				double videoFrequency = Double.parseDouble(request.getParameter("videoFrequency"));
 				double audioFrequency = Double.parseDouble(request.getParameter("audioFrequency"));
 				String channelChargeType = request.getParameter("channelChargeType");
 				String channelTransmissionType = request.getParameter("channelTransmissionType");
 				double channelCharge = Double.parseDouble(request.getParameter("channelCharge"));
-				String enableOrDisable = request.getParameter("enableOrDisable");
-				String updateName = request.getParameter("updateName");
+				String support = request.getParameter("support");
+				int category = Integer.parseInt(request.getParameter("category"));
 
-				value = chlogic.updateChannel(channelName, channelBand, videoFrequency, audioFrequency, channelChargeType,
-						channelTransmissionType, channelCharge, enableOrDisable, updateName);
+				value = chlogic.updateChannel(oldName, newName, channelBand, videoFrequency, audioFrequency, channelChargeType,
+						channelTransmissionType, channelCharge, support, category);
 				
 				if(value) {
 					rd = request.getRequestDispatcher("Success.jsp");

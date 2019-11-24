@@ -65,35 +65,32 @@ public class ChannelLogic {
 		return channelList;
 	}
 
-	public boolean updateChannel(String newChannelName, String newChannelBand,
+	public boolean updateChannel(String oldChannelName, String newChannelName, String newChannelBand,
 			double newVideoFrequency, double newAudioFrequency, String newChannelChargeType,
-			String newChannelTransmissionType, double newChannelCharge, String newChannelEnableOrDisable, String oldChannelName) {
+			String newChannelTransmissionType, double newChannelCharge, String support, int newCategoryId) {
 
-		long channelId = 0;
-		String query1 = "Select channelId from Channel where channelName=" + oldChannelName;
 		try {
-			ResultSet rs = JdbcDTH.executeDTHQueries(query1);
-			channelId = rs.getInt(1);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 
-		String query2 = "Update Channel Set channelName=" + "'" + newChannelName + "'" + "channelBand=" + "'"
-				+ newChannelBand + "'" + "videoFrequency=" + newVideoFrequency + "audioFrequency=" + newAudioFrequency
-				+ "channelChargeType=" + "'" + newChannelChargeType + "'" + "channelTransmissionType=" + "'"
-				+ newChannelTransmissionType + "'" + "channelCharge=" + newChannelCharge + "channelEnableOrDisable="
-				+ "'" + newChannelEnableOrDisable + "'" + "where channelId = " + channelId;
-		
-		try {
-			JdbcDTH.executeDTHQueries(query2);
+			// Get the id of the Channel we want to update
+			String channelId = "SELECT channelId FROM channel WHERE channelName='" + oldChannelName + "'";
+			ResultSet id = JdbcDTH.executeDTHQueries(channelId);
+			System.out.println("Before query");
+			while (id.next()) {
+				// Create query to update information about particular Channel
+				String updateQuery = "UPDATE channel SET" + " channelName=" + "'" + newChannelName + "'" + ",channelBand='" + newChannelBand + "'"
+						+ ",videoFrequency=" + newVideoFrequency + ",audioFrequency=" + newAudioFrequency + ",channelChargeType='" + newChannelChargeType + "'"
+						+ ",channelTransmissionType='" + newChannelTransmissionType + "'" + ",channelCharge=" + newChannelCharge
+						+ ",channelEnableOrDisable='" + support + "'" + ",categoryId=" + newCategoryId
+						+ " WHERE channelId=" + id.getInt(1);
+				System.out.println(updateQuery);
+				// Call utility class to connect to the database and receive ResultSet object
+				JdbcDTH.executeDTHQueries(updateQuery);
+			}
 			return true;
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		} catch (Exception e) {
+			System.err.println("Exception thrown : " + e);
 		}
 		return false;
-
 	}
 	
 	public boolean deleteChannel(String channelName) {
