@@ -7,21 +7,28 @@
 <title>Delete Package</title>
 <link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
+<script type="text/javascript">
+
+function msgDialog(){
+	if(window.confirm("Are you sure, you want to delete this data?")){
+		/* Proceed to delete data from DB */
+	}
+}
+</script>
 
 <body>
-	<h2>***Deleting a package also deletes the respective channels in the package***</h2>
-	<p>Please enter following details to delete the data:</p>
-	<form action="MyServlet" method="get">
-		<table>
+	<form action=msgDialog()>
+	<div class ="title">
+<center><h1>Infinity DTH</h1></center></div><br><br>
+		<table class="info">
 			<tr>
-				<td>Enter the package name to delete : </td>
-				<td><input type="text" name="deleteValue"></td>
+				<td style="color:rgba(255,0,0,0.8)">Enter Package name you want to delete : </td>
+				<td><input type="text" name="pkgName"></td>
 			</tr>
 			
-		</table>
-		<input type="hidden" name="option" value="package">
-		<input type="hidden" name="crud" value="deletePackage">
-		<input type="submit" value="Submit">
+		</table><br><br>
+		<center><input class="btn" type="submit" value="Delete" onclick="MyServlet.java"></center>
+		<input type="hidden" name="stbAction" value="deleteChannel">
 	</form>
 </body>
 </html>

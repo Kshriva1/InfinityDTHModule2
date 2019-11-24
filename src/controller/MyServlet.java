@@ -209,8 +209,8 @@ public class MyServlet extends HttpServlet {
 				
 			} else if (crud.equals("view")) {
 				List<ChannelPackage> channelPackageList = pkglogic.view();
-				request.setAttribute("channel", channelPackageList);
-				rd = request.getRequestDispatcher("disaplayChannelPackages.jsp");
+				request.setAttribute("package", channelPackageList);
+				rd = request.getRequestDispatcher("disaplayPackages.jsp");
 				rd.forward(request, response);
 				
 			} else if (crud.equals("update")) {

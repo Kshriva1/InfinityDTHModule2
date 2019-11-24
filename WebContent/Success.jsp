@@ -4,10 +4,15 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Infinity DTH</title>
+<title>Success</title>
 <link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
+
 <body>
-	<h1 style="text-align:center">Success!</h1>
+<div class ="title">
+<center><h1>Infinity DTH</h1></center></div>
+<div class="Center">
+	<h2 style="text-align:center">Success!  :)</h2>
+	</div>
 </body>
 </html>

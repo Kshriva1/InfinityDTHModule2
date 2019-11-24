@@ -4,12 +4,13 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Infinity DTH</title>
+<title>Package</title>
 <link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
 <body>
-	<br><br><br><br>
-	<h1 style="text-align:center">Manage Packages</h1>
+<div class ="title">
+<center><h1>Infinity DTH</h1></center></div>
+	<h2 style="text-align:center">Manage Packages</h2>
 	<div class="Center">
 	<a href="addPackage.jsp">Add Package Information</a><br><br>
 	<a href="viewPackage.jsp" style="margin-top:50px"> View Package Information</a><br><br>

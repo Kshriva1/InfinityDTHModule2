@@ -4,26 +4,28 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Infinity DTH</title>
+<title>DeleteSTB</title>
 <link rel="stylesheet" type="text/css" href="mystyle.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
 </head>
 <body>
-	<section class="container">
+	
 	<form action="MyServlet" method="get">
-	<div class="Center">
-	<table class="del">
+	<div class ="title">
+<center><h1>Infinity DTH</h1></center></div><br><br>
+	<table class="info">
 		<tr>
-			<td>Enter the STB Type You Want to Delete: </td>
+		  
+			<td style="color:rgba(255,0,0,0.8)">Enter the STB Type You Want to Delete: </td>
 			<td><input type="text" name="Type"></td>
 		</tr>
 	</table>
-	</div>
+	<br>
+	<br>
+	
 	<input type="hidden" name="option" value="settopbox">
 	<input type="hidden" name="crud" value="delete">
-	<input type="submit" value="Submit" >
+	<center><input class="btn" type="submit" value="Submit" ></center>
 	</form>
-</section>
+
 </body>
 </html>
