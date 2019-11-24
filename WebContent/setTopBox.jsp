@@ -4,12 +4,13 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Infinity DTH</title>
+<title>SetTopBox</title>
 <link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
 <body>
-	<br><br><br><br>
-	<h1 style="text-align:center">Manage Set Top Box</h1>
+	<div class ="title">
+<center><h1>Infinity DTH</h1></center></div>
+	<h2 style="text-align:center">Manage Set Top Box</h2>
 	<div class="Center">
 	<a href="addSetTopBox.jsp">Add Set Top Box Information</a><br><br>
 	<a href="viewSetTopBox.jsp" style="margin-top:50px"> View Set Top Box Information</a><br><br>

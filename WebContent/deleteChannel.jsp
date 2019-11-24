@@ -4,22 +4,32 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Infinity DTH</title>
+<title>Delete Channel</title>
 <link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
+<script type="text/javascript">
+function msgDialog(){
+	if(window.confirm("Are you sure, you want to delete this data? Deleting a package will delete the channels included in it.")){
+		/* Proceed to delete data from DB */
+	}
+}
+</script>
+
 <body>
-
-	<form action="MyServlet" method="get">
-	<table>
-		<tr>
-			<td>Enter the Channel Name You Want to Delete: </td>
-			<td><input type="text" name="Type"></td>
-		</tr>
-	</table>
-	<input type="hidden" name="option" value="channel">
-	<input type="hidden" name="crud" value="delete">
-	<input type="submit" value="Submit" >
+	<form action=msgDialog() >
+	<div class ="title">
+<center><h1>Infinity DTH</h1></center></div><br><br>
+		<table class="info">
+			<tr>
+				<td style="color:rgba(255,0,0,0.8)">Enter Name of channel you want to delete : </td>
+				<td><input type="text" name="channelName"></td>
+				</td>
+			</tr>
+			
+			
+		</table><br><br>
+		<center><input class="btn" type="submit" value="Delete" onclick="MyServlet.java"></center>
+		<input type="hidden" name="stbAction" value="deleteChannel">
 	</form>
-
 </body>
 </html>

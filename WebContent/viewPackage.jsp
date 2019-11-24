@@ -12,13 +12,15 @@
 <body>
 <div class ="title">
 <center><h1>Infinity DTH</h1></center></div>
+<section class="container">
 <div class="Center">
- <h1 style="text-align:center">Click to view SetTopBox Details</h1>
+ <h1 style="text-align:center">Click to view Package Details</h1>
  <form action="MyServlet" method="get">
  <input type="hidden" name="option" value="settopbox">
  <input type="hidden" name="crud" value="view">
  <input type="submit" value="Click">
  </form>
  </div> 
+ </section>
 </body>
 </html>
