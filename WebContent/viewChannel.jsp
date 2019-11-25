@@ -16,7 +16,7 @@
  <h1 style="text-align:center">Click to view Channel Details</h1>
  <div class ="Center">
  <form action="MyServlet" method="get">
- <input type="hidden" name="option" value="settopbox">
+ <input type="hidden" name="option" value="channel">
  <input type="hidden" name="crud" value="view">
  <input type="submit" value="Click">
  </form>

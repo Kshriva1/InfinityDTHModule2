@@ -14,10 +14,6 @@
 	<table class="info">
 	
 	<tr>
-		<td style="color:rgba(255,0,0,0.8)">Enter Channel Id :</td>
-		<td><input type="text" name="channelId"></td>
-	</tr>
-	<tr>
 		<td style="color:rgba(255,0,0,0.8)">Enter Channel Name : </td>
 		<td><input type="text" name="channelName" >  <br>
 	</tr>
@@ -36,22 +32,35 @@
 
 	<tr>
 		<td style="color:rgba(255,0,0,0.8)">Channel Charge Type : </td>
-		<td><input type="radio" name="channelChargeType">Free to Air (FTA) <br>
-		<input type="radio" name= "channelChargeType"> Paid </td>
+		<td><input type="radio" name="channelChargeType" value="Free To Air">Free to Air (FTA) <br>
+		<input type="radio" name= "channelChargeType" value="Paid"> Paid </td>
 	</tr>
 	
 	<tr>
 		<td style="color:rgba(255,0,0,0.8)">Channel Transmission Type : </td>
-		<td><input type="radio" name="channelTransmissionType" > Standard <br>
-		<input type="radio" name= "channelChargeType"> HD </td>
+		<td><input type="radio" name="channelTransmissionType" value="Standard"> Standard <br>
+		<input type="radio" name= "channelTransmissionType" value="HD">HD</td>
 	</tr>
 	<tr>
 		<td style="color:rgba(255,0,0,0.8)">Channel Charge : </td>
 		<td>$<input type="text" name="channelCharge"></td>
 	</tr>
+	
+	<tr>
+		<td style="color:rgba(255,0,0,0.8)">Channel Enable Status : </td>
+		<td><input type="radio" name="enableOrDisable" value="Enable">Enable<br>
+		<input type="radio" name= "enableOrDisable" value="Disable">Disable</td>
+	</tr>
+	
+	<tr>
+		<td style="color:rgba(255,0,0,0.8)">Category Name of the channel : </td>
+		<td>$<input type="text" name="categoryName"></td>
+	</tr>
+	
+	
 	</table><br><br>
-	<input type="hidden" name="option" value="channel">
-	<input type="hidden" name="crud" value="add">
+	<input type="hidden" name="option" value="package">
+	<input type="hidden" name="crud" value="channelAdd">
 	<center><input class="btn" type="submit" value="Submit"></center>
 	</form>
 </body>

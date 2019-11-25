@@ -53,7 +53,7 @@ CREATE TABLE Channel (
 	channelTransmissionType varchar (20) not null,
 	channelCharge number not null,
 	channelEnableOrDisable varchar(50) not null,
-	packageId references Package(pkgId)
+	pkgCategoryId references PackageCategory(pkgCategoryId)
 );
 
 CREATE TABLE FEATURE (

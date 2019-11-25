@@ -139,7 +139,7 @@ public class MyServlet extends HttpServlet {
 			if (crud.equals("view")) {
 				List<Channel> listChannel = chlogic.viewChannel();
 				request.setAttribute("channel", listChannel);
-				rd = request.getRequestDispatcher("disaplayChannels.jsp");
+				rd = request.getRequestDispatcher("displayChannels.jsp");
 				rd.forward(request, response);
 				
 			} else if (crud.equals("update")) {
@@ -155,7 +155,7 @@ public class MyServlet extends HttpServlet {
 				String updateName = request.getParameter("updateName");
 
 				value = chlogic.updateChannel(channelName, channelBand, videoFrequency, audioFrequency, channelChargeType,
-						channelTransmissionType, channelCharge, enableOrDisable, updateName);
+						channelTransmissionType, channelCharge, enableOrDisable,updateName);
 				
 				if(value) {
 					rd = request.getRequestDispatcher("Success.jsp");
@@ -261,10 +261,10 @@ public class MyServlet extends HttpServlet {
 				String channelTransmissionType = request.getParameter("channelTransmissionType");
 				double channelCharge = Double.parseDouble(request.getParameter("channelCharge"));
 				String enableOrDisable = request.getParameter("enableOrDisable");
-				String packageName = request.getParameter("packageName");
+				String categoryName = request.getParameter("categoryName");
 
 				value = chlogic.addChannel(channelName, channelBand, videoFrequency, audioFrequency, channelChargeType,
-						channelTransmissionType, channelCharge, enableOrDisable, packageName);
+						channelTransmissionType, channelCharge, enableOrDisable, categoryName);
 				if(value) {
 					rd = request.getRequestDispatcher("Success.jsp");
 					rd.forward(request, response);
