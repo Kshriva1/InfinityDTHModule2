@@ -22,7 +22,7 @@
      <br><br>
      Channel Band: <span><%= channel.getChannelBand() %></span>
      <br><br>
-      Video Frequency: <span><%= channel.getVideoFrequency() %></span>
+     Video Frequency: <span><%= channel.getVideoFrequency() %></span>
      <br><br>
      Audio Frequency: <span><%= channel.getAudioFrequency() %></span>
      <br><br>

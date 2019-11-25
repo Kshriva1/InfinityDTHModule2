@@ -15,7 +15,7 @@
 	<a href="addPackage.jsp">Add Package Information</a><br><br>
 	<a href="viewPackage.jsp" style="margin-top:50px"> View Package Information</a><br><br>
 	<a href="UpdatePackage.jsp" style="margin-top:50px"> Update Package Information</a><br><br>
-	<a href="addChannel.jsp" style="margin-top:50px"> Add Channels to Packages</a><br><br>
+	<a href="addChannel.jsp" style="margin-top:50px"> Add Channels to Package Categories</a><br><br>
 	<a href="deletePackage.jsp" style="margin-top:50px"> Delete Package Information</a><br>
 	</div>
 </body>

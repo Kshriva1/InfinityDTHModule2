@@ -15,39 +15,51 @@
 		<table class="info">
 			<tr>
 				<td style="color:rgba(255,0,0,0.8)">Enter Channel name to update: </td>
-				<td><input type="text" name="channelSearchField"></td>
+				<td><input type="text" name="updateName"></td>
+			</tr>
+			<tr>
+				<td style="color:rgba(255,0,0,0.8)">Enter the new channel name: </td>
+				<td><input type="text" name="channelName"></td>
 			</tr>
 			<tr>
 		<td style="color:rgba(255,0,0,0.8)">Enter Channel Band : </td>
 		<td><input type="text" name="channelBand"></td>
 	</tr>
 				<tr>
-		<td style="color:rgba(255,0,0,0.8)">Enter Video Frequency : </td>
-		<td><input type="text" name="videoFrequency"></td>
+		<td style="color:rgba(255,0,0,0.8)">Video Carrier Frequency : </td>
+		<td><input type="range" name="videoFrequency" min ="40" max="225"><br>
+	</tr>
+	<tr>
+		<td style="color:rgba(255,0,0,0.8)">Audio Carrier Frequency: </td>
+		<td><input type="range" name="audioFrequency" min ="45" max="230" ><br>
 	</tr>
 				<tr>
-		<td style="color:rgba(255,0,0,0.8)">Enter Audio Frequency : </td>
-		<td><input type="text" name="audioFrequency"></td>
+		<td style="color:rgba(255,0,0,0.8)">Channel Charge Type : </td>
+		<td><input type="radio" name="channelChargeType" value="Free To Air">Free to Air (FTA) <br>
+		<input type="radio" name= "channelChargeType" value="Paid"> Paid </td>
 	</tr>
-				<tr>
-		<td style="color:rgba(255,0,0,0.8)">Enter Channel Charge Type : </td>
-		<td><input type="text" name="channelChargeType"></td>
-	</tr>
-				<tr>
-		<td style="color:rgba(255,0,0,0.8)">Enter Transmission Type : </td>
-		<td><input type="text" name="channelTransmissionType"></td>
+	
+	<tr>
+		<td style="color:rgba(255,0,0,0.8)">Channel Transmission Type : </td>
+		<td><input type="radio" name="channelTransmissionType" value="Standard"> Standard <br>
+		<input type="radio" name= "channelTransmissionType" value="HD">HD</td>
 	</tr>
 				<tr>
 		<td style="color:rgba(255,0,0,0.8)">Enter Channel Charge: </td>
-		<td><input type="text" name="channelCharge"></td>
+		<td>$ <input type="text" name="channelCharge"></td>
+	</tr>
+	<tr>
+		<td style="color:rgba(255,0,0,0.8)">Channel Enable Status : </td>
+		<td><input type="radio" name="enableOrDisable" value="Enable">Enable<br>
+		<input type="radio" name= "enableOrDisable" value="Disable">Disable</td>
 	</tr>
 			
 		</table>
 		<br>
 		<br>
-		
+		<input type="hidden" name="option" value="channel">
+	    <input type="hidden" name="crud" value="update">
 		<center><input class="btn" type="submit" value="Update"></center>
-		<input type ="hidden" name ="updatechannel" value ="UpdateChannel">
 	</form>
 </body>
 </html>
