@@ -18,27 +18,27 @@
   <tr>
     
     <td>
-     SetTopBox Type: <span><%= setTopBox.getSTBType() %></span>
+    <span class="display" style="color:green"> SetTopBox Type:</span> <span class="display"><%= setTopBox.getSTBType() %></span>
      <br><br>
-     Length: <span><%= setTopBox.getSTBlength() %></span>
+     <span class="display" style="color:green">Length:</span> <span class="display"><%= setTopBox.getSTBlength() %></span>
      <br><br>
-     Breadth: <span><%= setTopBox.getSTBbreadth() %></span>
+     <span class="display" style="color:green">Breadth:</span> <span class="display"><%= setTopBox.getSTBbreadth() %></span>
      <br><br>
-     Width: <span><%= setTopBox.getSTBwidth() %></span>
+     <span class="display" style="color:green">Width:</span> <span class="display"><%= setTopBox.getSTBwidth() %></span>
      <br><br>
-     Price: <span><%= setTopBox.getPrice() %></span>
+    <span class="display" style="color:green"> Price:</span> <span class="display"><%= setTopBox.getPrice() %></span>
      <br><br>
-     Installation Charges: <span><%= setTopBox.getInstallationCharges() %></span>
+     <span class="display" style="color:green">Installation Charges:</span> <span class="display"><%= setTopBox.getInstallationCharges() %></span>
      <br><br>
-     Updation Charges: <span><%= setTopBox.getUpdationCharges() %></span>
+    <span class="display" style="color:green"> Updation Charges:</span> <span class="display"><%= setTopBox.getUpdationCharges() %></span>
      <br><br>
-     Percentage Discount: <span><%= setTopBox.getPercentageDiscount() %></span>
+     <span class="display" style="color:green">Percentage Discount:</span> <span class="display"><%= setTopBox.getPercentageDiscount() %></span>
      <br><br>
-     Billing Type: <span><%= setTopBox.getBillingType() %></span>
+     <span class="display" style="color:green">Billing Type:</span> <span class="display"><%= setTopBox.getBillingType() %></span>
      <br><br>
-     Refund Amount: <span><%= setTopBox.getRefundAmount() %></span>
+     <span class="display" style="color:green">Refund Amount:</span> <span class="display"><%= setTopBox.getRefundAmount() %></span>
      <br><br>
-     Features: <span><%= setTopBox.getSTBFeatures().toString().replace("[","").replace("]","") %></span>
+     <span class="display" style="color:green">Features:</span> <span class="display"><%= setTopBox.getSTBFeatures().toString().replace("[","").replace("]","") %></span>
      <br><br>
     </td>
     

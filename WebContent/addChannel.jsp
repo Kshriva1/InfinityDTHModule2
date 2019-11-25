@@ -15,11 +15,11 @@
 	
 	<tr>
 		<td style="color:rgba(255,0,0,0.8)">Enter Channel Name : </td>
-		<td><input type="text" name="channelName" >  <br>
+		<td><input type="text" name="channelName">  <br>
 	</tr>
 	<tr>
 		<td style="color:rgba(255,0,0,0.8)">Channel Band : </td>
-		<td><input type="text" name="channelBand" > <br>
+		<td><input type="text" name="channelBand"> <br>
 	</tr> 
 	<tr>
 		<td style="color:rgba(255,0,0,0.8)">Video Carrier Frequency : </td>

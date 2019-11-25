@@ -18,21 +18,21 @@
   <tr>
     
     <td>
-     Package name: <span><%= myPackage.getPkgName() %></span>
+     <span class="display" style="color:green">Package name:</span> <span class="display"><%= myPackage.getPkgName() %></span>
      <br><br>
-     Package Charge Type: <span><%= myPackage.getPkgChargeType() %></span>
+     <span class="display" style="color:green">Package Charge Type:</span> <span class="display"><%= myPackage.getPkgChargeType() %></span>
      <br><br>
-     Package Category : <span><%= myPackage.getPkgCategory().toString().replace("[","").replace("]","") %></span>
+     <span class="display" style="color:green">Package Category :</span> <span class="display"><%= myPackage.getPkgCategory().toString().replace("[","").replace("]","") %></span>
      <br><br>
-     Package Transmission Type: <span><%= myPackage.getPkgTransmissionType() %></span>
+     <span class="display" style="color:green">Package Transmission Type:</span> <span class="display"><%= myPackage.getPkgTransmissionType() %></span>
      <br><br>
-     Package Cost: <span><%= myPackage.getPkgCost() %></span>
+     <span class="display" style="color:green">Package Cost:</span> <span class="display"><%= myPackage.getPkgCost() %></span>
      <br><br>
-     Package From Date: <span><%= myPackage.getPkgFromDate() %></span>
+     <span class="display" style="color:green">Package From Date:</span> <span class="display"><%= myPackage.getPkgFromDate() %></span>
      <br><br>
-     Package To Date: <span><%= myPackage.getPkgToDate() %></span>
+     <span class="display" style="color:green">Package To Date:</span> <span class="display"><%= myPackage.getPkgToDate() %></span>
      <br><br>
-     Package Default Status: <span><%= myPackage.getPkgByDefault() %></span>
+     <span class="display" style="color:green">Package Default Status:</span> <span class="display"><%= myPackage.getPkgByDefault() %></span>
      <br><br>
     </td>
     
