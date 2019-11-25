@@ -18,21 +18,21 @@
   <tr>
     
     <td>
-     Channel Name: <span><%= channel.getChannelName() %></span>
+     <span class="display" style="color:green">Channel Name:</span><span class="display"><%= channel.getChannelName() %></span>
      <br><br>
-     Channel Band: <span><%= channel.getChannelBand() %></span>
+     <span class="display" style="color:green">Channel Band:</span> <span class="display"><%= channel.getChannelBand() %></span>
      <br><br>
-     Video Frequency: <span><%= channel.getVideoFrequency() %></span>
+     <span class="display" style="color:green">Video Frequency:</span> <span class="display"><%= channel.getVideoFrequency() %></span>
      <br><br>
-     Audio Frequency: <span><%= channel.getAudioFrequency() %></span>
+     <span class="display" style="color:green">Audio Frequency:</span> <span class="display"><%= channel.getAudioFrequency() %></span>
      <br><br>
-     Channel Charge Type: <span><%= channel.getChannelChargeType() %></span>
+     <span class="display" style="color:green">Channel Charge Type:</span> <span class="display"><%= channel.getChannelChargeType() %></span>
      <br><br>
-     Channel Transmission type: <span><%= channel.getChannelTransmissionType() %></span>
+     <span class="display" style="color:green">Channel Transmission type:</span> <span class="display"><%= channel.getChannelTransmissionType() %></span>
      <br><br>
-     Channel Charges: <span><%= channel.getChannelCharge() %></span>
+     <span class="display" style="color:green">Channel Charges:</span> <span class="display"><%= channel.getChannelCharge() %></span>
      <br><br>
-     Channel Status: <span><%= channel.getChannelEnableOrDisable() %></span>
+     <span class="display" style="color:green">Channel Status:</span> <span class="display"><%= channel.getChannelEnableOrDisable() %></span>
      <br><br>
     </td>
     
